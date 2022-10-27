@@ -1,0 +1,9 @@
+<!--<h1>Translate#input</h1>-->
+<!--<p>Find me in app/views/translate/input.html.erb</p>-->
+<h2>Добро пожаловать на страницу перевода чисел</h2>
+<%= form_tag("/translate/output.json", :method => "get", remote:true, id:'translate_table') do %>
+  <%= label_tag("Введите число:") %>
+  <%= number_field_tag(:ch, nil, min: 0, step: 1)%> <br/>
+    <%= submit_tag("Перевести") %>
+<% end %>
+<div id="result"></div>
