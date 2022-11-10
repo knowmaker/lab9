@@ -12,7 +12,7 @@ class TranslateController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json: { type: @result.class.to_s, value: [@chislo,@st,@rev_st,@result] }
+        render json: { type: @result.class.to_s, value: [@chislo, @st, @rev_st, @result] }
       end
     end
   end
